@@ -1,0 +1,279 @@
+body{
+    max-width: 1920px;
+    /* max-height: 1080px; */
+    /* background-color:blue; */
+
+}
+.contenedor-principal{
+    /* background-color: black; */
+    display: flex;
+    /* El contenedor principal ocupa el 100% de la altura del viewport */
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    background-color: #F3F5FC;
+
+    
+}
+.contenedor-ingresar{
+    width: 75%;
+    margin: 25px 0;
+
+    /* background-color: gray; */
+    border-radius: 32px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-ingresar form{
+    /* background-color: aqua; */
+
+    /* width: 65%; */
+    margin-left: 200px;
+    /* flex-grow -> CRECIMIENTO FLEXIBLE */
+    /* El segundo elemento crecerá para ocupar todo el espacio restante */
+    flex-grow: 1;
+    /* Para dejar al texto y botones al borde inferior del form */
+    position: relative;
+
+    /* display: flex; */
+}
+form textarea{
+    height: 60%;
+    width: 90%;
+    /* background-color: red; */
+    /* flex-grow: 1; */
+
+    background-color: transparent;
+    /* Para quitar el borde al hacer clic o enfocar el <textarea>, puedes usar la propiedad outline */
+    outline: none;
+    border: none;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    color: #0A3871;
+
+
+}
+
+
+#texto-ingresado::placeholder{
+    color: #0A3871;
+
+}
+.texto-boton{
+    /* background-color: purple; */
+
+    width: 100%;
+    font-size: 14px;
+    /* Para dejar al texto y botones al borde inferior del form */
+    position: absolute;
+    bottom: 0; 
+    margin-bottom: 25px;
+
+}
+.texto-ayuda{
+    cursor: default;
+}
+
+form button{
+    width: 250px;
+    padding: 17px 0;
+    cursor: pointer;
+    border-radius: 18px;
+    border: 1px solid #0A3871;   
+    
+}
+.btn-encriptar{
+    background-color: #0A3871;
+    color: white;
+    
+}
+.btn-desencriptar{
+    background-color:transparent;
+    color: #0A3871;
+    margin-left: 25px;
+}
+
+.contenedor-mostrar{
+    background-color: white;
+    width: 25%;
+    margin: 25px 0;
+    margin-right: 50px;
+    border-radius: 32px;
+    position: relative;
+    display: flex;
+    /* Asegura que los elementos estén uno encima del otro */
+    flex-direction: column;
+    /* Centra verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Sombras */
+    box-shadow: 0px 24px 32px -7px #00000014;
+
+    
+}
+.muñeco{
+    width: 90%;
+    
+}
+.contenedor-mostrar textarea{
+    width: 60%;
+    height: 65%;
+    /* background-color: red; */
+    background-color: transparent;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    color: #495057;
+    text-align:center;
+    margin-top: 10px;
+    /* Para quitar el borde al hacer clic o enfocar el <textarea>, puedes usar la propiedad outline */
+    outline: none;
+    border: none;
+    resize: none;
+    cursor: default;
+}
+
+#texto-mostrado::placeholder{
+    color: black;
+
+}
+.contenedor-mostrar h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 15px;  
+    cursor: default;
+}
+.btn-copiar{
+    background-color:transparent;
+    /* Ocultar el boton */
+    display: none;
+    color: #0A3871;
+    border: 1px solid #0A3871;   
+    width: 250px;
+    padding: 17px 0;
+    cursor: pointer;
+    border-radius: 18px;
+    /* margin-left: 25px; */
+    /* Para dejar al boton al borde inferior del contenedor mostrar*/
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 25px;
+}
+/*------------------------------------------------*/
+/*------------------MEDIA QUERYS------------------*/
+/*------------------------------------------------*/
+@media(min-width:1366px) {
+    
+}
+@media(max-width:1100px) {
+    
+    .contenedor-principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* width: 1000px; */
+        /* margin-left: 25%; */
+        
+    }
+    .contenedor-ingresar {
+        width: 80%;
+        height: 50%;
+        /* background-color: red; */
+        left: 0;
+        /* margin-right: auto; */
+        flex-grow: 1;
+        
+    }
+    h1 img{
+        width: 150px;
+        height: auto;
+        
+        
+    }
+    .contenedor-ingresar form{
+        /* background-color: blue; */
+        /* Ocupara de nuevo el espacio del contenedor ingresar */
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    form textarea{
+        margin-left: 30px;
+
+    }
+    .contenedor-mostrar{
+        width: 80%;
+        height: 20%;
+        /* margin-right: 15%; */
+        /* width: 200px; */
+        flex-grow: 1;
+        margin-right: 0;
+
+        /* width: 100vh; */
+    }
+    .contenedor-mostrar textarea{
+        height: 40%;
+    }
+    .muñeco{
+        display: none;
+    }
+    .botones{
+        text-align: center;
+
+    }
+    form button{
+        width: 45%;
+    }
+    
+}
+
+/*
+@media(max-width:880px){
+    .contenedor-principal{
+        
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+    }
+    .contenedor-ingresar{
+        margin-right: 20px;
+    }
+    .contenedor-mostrar{
+        margin-right: 20px;
+
+    }
+    
+}
+*/
+
+@media(max-width:450px){
+    h1 img{
+        width: 100px;
+        height: auto;   
+    }
+    .contenedor-ingresar{
+        height: 40%;
+        /* background-color: yellow; */
+    }
+    .contenedor-ingresar form{
+        margin-left: 0px;
+        /* background-color: purple; */
+    }
+    form textarea{
+        margin-left: 25px;
+        height: 40%;
+    }
+
+    .texto-ayuda{
+        margin-left: 20px;
+    }
+    form button{
+        width: 80%;
+    }
+    .btn-desencriptar{
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}

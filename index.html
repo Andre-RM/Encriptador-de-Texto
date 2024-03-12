@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador Alura</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="contenedor-principal"> 
+        <section class="contenedor-ingresar">
+            <h1>
+                <img src="Alura Challenge - Desafío 1 IMAGENES/Logo.png" alt="logo de alura">
+            </h1>
+
+            <form>
+                <textarea name="" id="texto-ingresado" cols="50" rows="10" placeholder="Ingrese el texto aquí" style="resize: none;"></textarea>
+                <br>
+                <div class="texto-boton">
+                    <div class="texto-ayuda">
+                        <img src="Alura Challenge - Desafío 1 IMAGENES/bi_exclamation-circle-fill-1.png" alt="">
+                        Solo letras minúsculas y sin acento.
+                    </div>
+                    <br>
+                    <div class="botones">
+                        <button onclick="encriptarTexto()" class="btn-encriptar" type="button">Encriptar</button>
+                        <button onclick="desencriptarTexto()" class="btn-desencriptar" type="button">Desencriptar</button>     
+                    </div>
+                    
+                </div>          
+            </form>
+        </section>
+
+        <section class="contenedor-mostrar">
+            <img class="muñeco" src="Alura Challenge - Desafío 1 IMAGENES/Muñeco.png" alt="muñeco">
+            <h2 class="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+            <textarea name="" class="texto-mostrado" readonly placeholder="Ingresa el texto que desees encriptar o desencriptar." cols="30" rows="10"></textarea>
+            <button class="btn-copiar" onclick="copiarTexto()" type="button">Copiar</button>
+        </section>     
+    </main>
+    <script src="encrip.js"></script>
+</body>
+</html>
